@@ -1,4 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root{
+  --text-color: #000000;
+  --card-front-color: #772D2D;
+  --card-back-color: #786739;
+}
+
 body {
-    background-color: bisque;
-    color: rgb(177, 39, 14);
+  background: url(img/bg-desktop-green.webp);
+  font-family: Josefin Sans;
 }
