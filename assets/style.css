@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap');
 
 :root{
-  --text-color: #000000;
+  --text-color: #ffffff;
   --card-front-color: #772D2D;
-  --card-back-color: #786739;
+  --card-back-color: #BC9E3E;
 }
 
 body {
-  background: url(img/bg-desktop-green.webp);
-  font-family: Josefin Sans;
+  background: url(img/bg-desktop-red\ \(1\).webp);
+  font-family: Bai Jamjuree;
 }
 
 .cartao__conteudo {
@@ -16,21 +16,20 @@ body {
     text-align: center;
     height: 100%;
   }
-
+  
   #container {
     display: flex;
     flex-wrap: wrap;
   }
-
   .cartao {
     margin: 1rem 1rem;
     height: 20rem;
     flex-grow: 1;
     flex-basis: calc(33% - 6rem);
   }
-
   .cartao__conteudo p {
     padding: 4rem;
+    margin-top: 4rem;
   }
 
   .cartao__conteudo h3 {
@@ -48,10 +47,37 @@ body {
     color: var(--text-color);
     font-weight: 500;
   }
+
   .cartao__conteudo__resposta p {
     color: var(--card-back-color);
     font-weight: 700;
   }
+
+  .cartao:hover .cartao__conteudo{
+    transform: rotateY(180deg);
+  }
+
+  .cartao__conteudo{
+    transform-style: preserve-3d;
+    transition: transform 500ms ease-in-out;
+  }
+
+  .cartao__conteudo h3{
+    backface-visibility: hidden;
+  }
+
+  .cartao__conteudo__pergunta,
+  .cartao__conteudo__resposta {
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  .cartao__conteudo__resposta{
+    transform: rotateY(180deg);
+  }
+
 
   footer {
     background-color: black;
@@ -67,4 +93,3 @@ body {
     font-size: 0.6rem;
     margin-top: 0.5rem;
   }
-  
